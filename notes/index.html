@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":"yes","show_result":"yes","style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="一些快速记录的笔记 copy &amp; paste2022&#x2F;03&#x2F;19 在 Mac OS 可以使用 pbcopy 和 pbpaste 在命令行中进行复制和粘贴操作:  pbcopy &lt; ~&#x2F;.ssh&#x2F;public_key 复制 public_key 内容到剪贴板。 curl baidu.com | pbcopy 复制 baidu.com 站点内容到剪贴板。 pbpaste &gt; bai">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Notes">
+<meta property="og:url" content="http://example.com/notes/index.html">
+<meta property="og:site_name" content="Wuxh">
+<meta property="og:description" content="一些快速记录的笔记 copy &amp; paste2022&#x2F;03&#x2F;19 在 Mac OS 可以使用 pbcopy 和 pbpaste 在命令行中进行复制和粘贴操作:  pbcopy &lt; ~&#x2F;.ssh&#x2F;public_key 复制 public_key 内容到剪贴板。 curl baidu.com | pbcopy 复制 baidu.com 站点内容到剪贴板。 pbpaste &gt; bai">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-27T19:23:24.000Z">
+<meta property="article:modified_time" content="2024-10-22T20:32:12.899Z">
+<meta property="article:author" content="Wuxh">
+<meta property="article:tag" content="notes">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/notes/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Notes | Wuxh
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Wuxh</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Front-end Development</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-notes">
+
+    <a href="/notes" rel="section"><i class="fa fa-sticky-note fa-fw"></i>笔记</a>
+
+  </li>
+        <li class="menu-item menu-item-bookmarks">
+
+    <a href="/bookmarks" rel="section"><i class="fa fa-bookmark fa-fw"></i>书签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">Notes
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <p>一些快速记录的笔记</p>
+<h2 id="copy-amp-paste"><a href="#copy-amp-paste" class="headerlink" title="copy &amp; paste"></a>copy &amp; paste</h2><p><em>2022/03/19</em></p>
+<p>在 Mac OS 可以使用 <code>pbcopy</code> 和 <code>pbpaste</code> 在命令行中进行复制和粘贴操作:</p>
+<ul>
+<li><code>pbcopy &lt; ~/.ssh/public_key</code> 复制 public_key 内容到剪贴板。</li>
+<li><code>curl baidu.com | pbcopy</code> 复制 baidu.com 站点内容到剪贴板。</li>
+<li><code>pbpaste &gt; baidu.html</code> 粘贴剪贴板内容到 baidu.html 文件中。</li>
+</ul>
+<h2 id="Jest-unit-testing"><a href="#Jest-unit-testing" class="headerlink" title="Jest unit testing"></a>Jest unit testing</h2><p><em>2022/03/18</em></p>
+<p>在阅读 AntD 测试用例时，需要单独运行某个组件 case，或者某个组件的一条 case.</p>
+<ul>
+<li>仅运行 components/button 目录下测试用例: <code>npm run test -- components/button</code></li>
+<li>仅运行 button 用例名称为 ‘mount correctly’ 的 case : <code>npm run test -- components/button -t &quot;mount correctly&quot;</code></li>
+<li>接上条, 使用 <a target="_blank" rel="noopener" href="https://jestjs.io/docs/api#testonlyname-fn-timeout">Jest api</a> (test.only、test.skip) 暂时运行/跳过某些 case:</li>
+</ul>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-  it(&#x27;renders correctly&#x27;, () =&gt; &#123;</span></span><br><span class="line"><span class="addition">+  it.only(&#x27;renders correctly&#x27;, () =&gt; &#123;  /* 仅运行这条 case */</span></span><br><span class="line">     expect(mount(&lt;Button&gt;Follow&lt;/Button&gt;).render()).toMatchSnapshot();</span><br><span class="line">   &#125;);</span><br><span class="line"> </span><br><span class="line"><span class="deletion">-  it(&#x27;mount correctly&#x27;, () =&gt; &#123;</span></span><br><span class="line"><span class="addition">+  it.skip(&#x27;mount correctly&#x27;, () =&gt; &#123; /* 跳过这条 case */</span></span><br><span class="line">     expect(() =&gt; mount(&lt;Button&gt;Follow&lt;/Button&gt;)).not.toThrow();</span><br><span class="line">   &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>其中 npm run test –, <code>--</code> 是指将后面的参数传递给 script; <a target="_blank" rel="noopener" href="https://github.com/npm/npm/pull/5518">Passing args into run-scripts</a>.</p>
+<h2 id="Snapshot-Testing"><a href="#Snapshot-Testing" class="headerlink" title="Snapshot Testing"></a>Snapshot Testing</h2><p><em>2022/03/09</em></p>
+<p>antfu 开源的 <a target="_blank" rel="noopener" href="https://github.com/antfu/unconfig">unconfig Repo</a> 其作用是加载通用配置文件。在仓库的单元测试中发现了快照测试。比如:<br><a target="_blank" rel="noopener" href="https://jestjs.io/docs/snapshot-testing">Jest snapshot testing</a>, 使用 <code>jest --updateSnapshot</code> 或 <code>jest -u</code> 来更新所有快照。<br><a target="_blank" rel="noopener" href="https://vitest.dev/api/#tothrowerror">vitest snapshot testing</a>, 使用 <code>vitest --update</code> 或 <code>vitest -u</code> 来更新所有快照。<br><a target="_blank" rel="noopener" href="https://github.com/avajs/ava/blob/main/docs/04-snapshot-testing.md">ava snapshot testing</a>, 使用 <code>ava --update-snapshots</code> 或 <code>ava -u</code> 来更新所有快照。</p>
+<p>顺便补充一个 <a target="_blank" rel="noopener" href="https://gist.githubusercontent.com/Wxh16144/e61f87de20ed1ce534edf0ff8258ea56/raw/b28c48054e18ced5e0c500b15210d3cea935252e/ava_puppeteer.js">ava + puppeteer.test</a> 测试示列。</p>
+<h2 id="import-maps"><a href="#import-maps" class="headerlink" title="import-maps"></a>import-maps</h2><p><em>2022/02/24</em></p>
+<p>在阅读 <a target="_blank" rel="noopener" href="https://beta.reactjs.org/">New React Docs</a> 时发现文中有交互式调试功能。点击 Download 按钮还可以下载 <code>sandbox.html</code> 文件。直接在浏览器中运行示例代码。<br>阅读了 <a target="_blank" rel="noopener" href="https://github.com/reactjs/reactjs.org/blob/main/beta/src/components/MDX/Sandpack/DownloadButton.tsx#L43-L50">reactjs.org repo</a> 后发现是 html 模版中使用了 <a target="_blank" rel="noopener" href="https://babel.dev/docs/en/babel-standalone">@babel/standalone</a> 和 <code>&lt;script type=&quot;importmap&quot;&gt;</code>。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;importmap&quot;</span>&gt;</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="javascript">  <span class="string">&quot;imports&quot;</span>: &#123;</span></span><br><span class="line"><span class="javascript">    <span class="string">&quot;react&quot;</span>: <span class="string">&quot;https://cdn.skypack.dev/react&quot;</span>,</span></span><br><span class="line"><span class="javascript">    <span class="string">&quot;react-dom&quot;</span>: <span class="string">&quot;https://cdn.skypack.dev/react-dom&quot;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b23d823a183a">Javascript Import maps(中文)</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/WICG/import-maps">Github WICG/import-maps</a></li>
+</ul>
+<h2 id="markdown-it-和-feed"><a href="#markdown-it-和-feed" class="headerlink" title="markdown-it 和 feed"></a>markdown-it 和 feed</h2><p><em>2022/02/24</em></p>
+<p>笔记这栏是参考 <a target="_blank" rel="noopener" href="https://antfu.me/notes">antfu.me/notes</a> 而写的。看到有 <code>rss</code> 订阅,想着自己的笔记也实现一下。使用 hexo 的自动生成 rss 插件无法生成自己想要的。<br>阅读 <a target="_blank" rel="noopener" href="https://github.com/antfu/antfu.me">antfu.me repo</a> 后才发现，作者是使用 <a target="_blank" rel="noopener" href="https://github.com/markdown-it/markdown-it">markdown-it</a> 和 <a target="_blank" rel="noopener" href="https://github.com/jpmonette/feed">feed</a> 自己写脚本实现的。<a target="_blank" rel="noopener" href="https://github.com/antfu/antfu.me/blob/main/scripts/rss.ts">scripts/rss.ts</a>  </p>
+<h2 id="Vite-插件-unplugin-auto-import"><a href="#Vite-插件-unplugin-auto-import" class="headerlink" title="Vite 插件 unplugin-auto-import"></a>Vite 插件 unplugin-auto-import</h2><p><em>2022/02/16</em></p>
+<p>写 <code>TypeScript</code> 时，使用 <a target="_blank" rel="noopener" href="https://github.com/antfu/unplugin-auto-import">unplugin-auto-import</a> 实现按需自动导入API。</p>
+<p>插件 <a target="_blank" rel="noopener" href="https://github.com/dishait/vite-auto-import-resolvers">vite-auto-import-resolvers</a> 使用了 <code>unplugin-auto-import</code> 的自定义 <code>resolvers</code>, see <a target="_blank" rel="noopener" href="https://github.com/dishait/vite-auto-import-resolvers/blob/main/src/dir.ts#L94-L118">github 实现</a>。</p>
+<h2 id="位运算符速记"><a href="#位运算符速记" class="headerlink" title="位运算符速记"></a>位运算符速记</h2><p><em>2022/02/09</em></p>
+<ul>
+<li><code>x ** y</code> =&gt; <code>Math.pow(x, y)</code></li>
+<li><code>x &lt;&lt; y</code> =&gt; <code>x * 2 ** y</code></li>
+<li><code>x &gt;&gt; 1</code> =&gt; <code>x &gt;&gt;&gt; 1</code> =&gt; <code>Math.floor(x / 2)</code></li>
+<li><code>~x</code> =&gt; <code>-(x + 1)</code></li>
+</ul>
+<h2 id="git-submodule"><a href="#git-submodule" class="headerlink" title="git submodule"></a>git submodule</h2><p><em>2022/02/09</em></p>
+<ul>
+<li>项目中添加子仓库 <code>git submodule add -b 分支 地址 目录</code></li>
+<li>克隆带子模块仓库 <code>git clone --recursive -j8 地址</code></li>
+<li>更新已克隆仓库的子仓库 <code>git submodule update --init --recursive</code></li>
+<li>更新子仓库 <code>git submodule update --remote</code></li>
+<li>推送所有子仓库而不push主仓库 <code>git push --recurse-submodules=only</code></li>
+</ul>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p><em>2022/02/09</em></p>
+<ul>
+<li>使用 <code>git -C</code> 来指定工作目录, e.g. <code>-c $PWD</code> 指当前目录</li>
+<li><code>git commit --amend --no-edit --no-verify</code><ul>
+<li><strong>–amend</strong> 创建一个新的提交来替换当前分支的顶端</li>
+<li><strong>–no-edit</strong> 不调用编辑器，使用当前分支顶端提交信息</li>
+<li><strong>–no-verify</strong> 绕过 <a target="_blank" rel="noopener" href="https://git-scm.com/docs/githooks">githooks</a> 缩写<code>-n</code></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#copy-amp-paste"><span class="nav-number">1.</span> <span class="nav-text">copy &amp; paste</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jest-unit-testing"><span class="nav-number">2.</span> <span class="nav-text">Jest unit testing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Snapshot-Testing"><span class="nav-number">3.</span> <span class="nav-text">Snapshot Testing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#import-maps"><span class="nav-number">4.</span> <span class="nav-text">import-maps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown-it-%E5%92%8C-feed"><span class="nav-number">5.</span> <span class="nav-text">markdown-it 和 feed</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vite-%E6%8F%92%E4%BB%B6-unplugin-auto-import"><span class="nav-number">6.</span> <span class="nav-text">Vite 插件 unplugin-auto-import</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6%E9%80%9F%E8%AE%B0"><span class="nav-number">7.</span> <span class="nav-text">位运算符速记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-submodule"><span class="nav-number">8.</span> <span class="nav-text">git submodule</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">9.</span> <span class="nav-text">git</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Wuxh"
+      src="https://avatars3.githubusercontent.com/u/32004925?s=460&u=154f902e7f852def85af5716e81b275fc76cbf86&v=4">
+  <p class="site-author-name" itemprop="name">Wuxh</p>
+  <div class="site-description" itemprop="description">知道的越多, 不知道的就越多</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Wxh16144" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Wxh16144" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wxh1220@gmail.com" title="E-Mail → mailto:wxh1220@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wuxh</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '1174bfe3197e8452ff45',
+      clientSecret: '5fab41bc50a864b17d1a26164e585d9b8853eff3',
+      repo        : 'wxh16144.github.io',
+      owner       : 'Wxh16144',
+      admin       : ['Wxh16144'],
+      id          : '0914b6caefe92f671259d1c99b683468',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
